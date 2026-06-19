@@ -34,4 +34,4 @@ No build step — open any `.html` file in a browser to preview. Push to `main` 
 GitHub Pages redeploys automatically. Keep the palette and "chunky" headings
 consistent with the Burp Battle app design.
 
-© 2026 Utku Özer
+© 2026 Korhan Tan
