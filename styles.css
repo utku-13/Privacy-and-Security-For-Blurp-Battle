@@ -1,0 +1,213 @@
+/*
+ * Burp Battle — legal pages styling.
+ * Mirrors the in-app design system (src/styles.css): same palette, the same
+ * "chunky" Outfit display headings over Figtree body text, soft green shadows
+ * and rounded cards. Keep it pixel-friendly with the app, not a redesign.
+ */
+
+:root {
+  --bg: #F6FBF7;
+  --ink: #14342B;
+  --ink-soft: #1B2B24;
+  --muted: #6B7F76;
+  --green: #2D6A4F;
+  --green-soft: #B7E4C7;
+  --gold: #FFC93C;
+  --card: #FFFFFF;
+  --radius: 24px;
+  --shadow: 0 18px 40px -20px rgba(20, 52, 43, 0.35);
+  --shadow-sm: 0 8px 20px -12px rgba(20, 52, 43, 0.3);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(1100px 520px at 50% -10%, #EAF7EF 0%, rgba(234, 247, 239, 0) 70%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 40px) clamp(18px, 5vw, 28px) 64px;
+}
+
+/* Display type */
+.chunky {
+  font-family: "Outfit", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+.gold { color: var(--gold); }
+.green { color: var(--green); }
+
+/* Top bar: wordmark + language toggle */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.wordmark .badge {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-size: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.wordmark .name { font-size: 19px; }
+
+.lang-toggle {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  height: 42px;
+  min-width: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.lang-toggle:active { transform: scale(0.92); }
+
+/* Hero */
+.hero { margin: 8px 0 28px; }
+.hero h1 {
+  margin: 0;
+  font-size: clamp(34px, 8vw, 52px);
+}
+.hero .sub {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+.updated {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--green-soft);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(20px, 5vw, 30px);
+  margin-top: 20px;
+}
+.card h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+.card h2 .em { font-size: 22px; margin-right: 8px; }
+.card p { margin: 10px 0; color: var(--ink-soft); }
+.card p.lead { color: var(--muted); }
+.card ul { margin: 10px 0; padding-left: 22px; }
+.card li { margin: 8px 0; color: var(--ink-soft); }
+.card li::marker { color: var(--green); }
+.card a { color: var(--green); font-weight: 700; }
+
+.tldr {
+  background: linear-gradient(135deg, #F0FBF4, #FFFFFF);
+  border: 1px solid var(--green-soft);
+}
+
+/* Navigation cards on the hub (index) */
+.nav-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+.nav-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+.nav-card:active { transform: scale(0.985); }
+@media (hover: hover) {
+  .nav-card:hover { transform: translateY(-2px); box-shadow: 0 22px 46px -20px rgba(20, 52, 43, 0.42); }
+}
+.nav-card .ico {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--green-soft);
+  font-size: 26px;
+}
+.nav-card .body { flex: 1 1 auto; }
+.nav-card .body .t { font-family: "Outfit", sans-serif; font-weight: 800; font-size: 18px; }
+.nav-card .body .d { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.nav-card .arrow { color: var(--muted); font-size: 22px; flex: 0 0 auto; }
+
+/* Back link */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  text-decoration: none;
+  color: var(--green);
+  font-weight: 700;
+}
+.back:active { opacity: 0.6; }
+
+/* Footer */
+.foot {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.foot a { color: var(--muted); }
+
+/* Language visibility — toggled by data-lang on <html> */
+html[data-lang="en"] [data-tr] { display: none !important; }
+html[data-lang="tr"] [data-en] { display: none !important; }

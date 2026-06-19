@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Burp Battle — Security</title>
+  <meta name="description" content="Burp Battle Security overview: local-first design, no servers, no accounts, minimal attack surface." />
+  <meta name="theme-color" content="#F6FBF7" />
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("bb-legal-lang");
+        var l = (s === "en" || s === "tr") ? s
+          : ((navigator.language || "").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+        document.documentElement.setAttribute("data-lang", l);
+        document.documentElement.setAttribute("lang", l);
+      } catch (e) { document.documentElement.setAttribute("data-lang", "en"); }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">
+        <span class="badge">🎤</span>
+        <span class="name chunky">Burp Battle</span>
+      </a>
+      <button class="lang-toggle" data-lang-toggle type="button">TR</button>
+    </div>
+
+    <header class="hero">
+      <h1 class="chunky">
+        <span data-en><span class="gold">Security.</span></span>
+        <span data-tr><span class="gold">Güvenlik.</span></span>
+      </h1>
+      <p class="sub">
+        <span data-en>The safest data is the data you never collect.</span>
+        <span data-tr>En güvenli veri, hiç toplamadığınız veridir.</span>
+      </p>
+      <span class="updated">
+        <span data-en>Last updated: June 19, 2026</span>
+        <span data-tr>Son güncelleme: 19 Haziran 2026</span>
+      </span>
+    </header>
+
+    <div class="card tldr">
+      <h2><span class="em">🛡️</span><span data-en>How we keep it safe</span><span data-tr>Nasıl güvende tutuyoruz</span></h2>
+      <p>
+        <span data-en>Burp Battle is built local-first. With no accounts, no servers, and no data leaving your phone, there's almost nothing to attack, leak, or breach. Security here is mostly a matter of doing less.</span>
+        <span data-tr>Burp Battle önce-yerel (local-first) olarak tasarlandı. Hesap, sunucu ve telefonunuzdan ayrılan veri olmadığından saldırılacak, sızdırılacak veya ihlal edilecek neredeyse hiçbir şey yoktur. Buradaki güvenlik çoğunlukla daha azını yapma meselesidir.</span>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span data-en>On-device by design</span><span data-tr>Tasarım gereği cihazda</span></h2>
+      <ul>
+        <li>
+          <span data-en>The whole game runs offline on your device. It makes no network calls during play.</span>
+          <span data-tr>Oyunun tamamı cihazınızda çevrimdışı çalışır. Oynarken hiçbir ağ isteği yapmaz.</span>
+        </li>
+        <li>
+          <span data-en>Microphone audio is analysed in memory in real time and discarded immediately — it's never written to disk or uploaded.</span>
+          <span data-tr>Mikrofon sesi gerçek zamanlı olarak bellekte analiz edilir ve hemen atılır — asla diske yazılmaz veya yüklenmez.</span>
+        </li>
+        <li>
+          <span data-en>There are no user accounts, passwords, or logins, so there are no credentials to steal.</span>
+          <span data-tr>Kullanıcı hesabı, parola veya giriş yoktur; dolayısıyla çalınacak kimlik bilgisi de yoktur.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span data-en>Platform protections</span><span data-tr>Platform korumaları</span></h2>
+      <ul>
+        <li>
+          <span data-en>The app is distributed through the Apple App Store and runs inside iOS's standard app sandbox, isolated from other apps and your system.</span>
+          <span data-tr>Uygulama Apple App Store üzerinden dağıtılır ve iOS'un standart uygulama korumalı alanında (sandbox), diğer uygulamalardan ve sisteminizden yalıtılmış olarak çalışır.</span>
+        </li>
+        <li>
+          <span data-en>The microphone is only ever accessed after you grant iOS permission, and only during a recording turn.</span>
+          <span data-tr>Mikrofona yalnızca iOS izni verdikten sonra ve yalnızca kayıt sırasında erişilir.</span>
+        </li>
+        <li>
+          <span data-en>Any link to the web (these pages) opens in your system browser over HTTPS.</span>
+          <span data-tr>Web'e giden herhangi bir bağlantı (bu sayfalar) HTTPS üzerinden sistem tarayıcınızda açılır.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span data-en>Keeping it that way</span><span data-tr>Bunu sürdürmek</span></h2>
+      <p>
+        <span data-en>We ship security and bug fixes through normal App Store updates. Keeping the app and iOS up to date is the best thing you can do to stay protected.</span>
+        <span data-tr>Güvenlik ve hata düzeltmelerini normal App Store güncellemeleriyle yayınlarız. Korunmak için yapabileceğiniz en iyi şey, uygulamayı ve iOS'u güncel tutmaktır.</span>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span data-en>Reporting a vulnerability</span><span data-tr>Güvenlik açığı bildirme</span></h2>
+      <p>
+        <span data-en>Found something that looks off? We'd genuinely like to hear about it. Email <a href="mailto:ozerutku13@gmail.com">ozerutku13@gmail.com</a> with the details and steps to reproduce, and please give us a reasonable chance to fix it before sharing it publicly. We appreciate responsible disclosure.</span>
+        <span data-tr>Yanlış görünen bir şey mi buldunuz? Bunu gerçekten duymak isteriz. Ayrıntıları ve yeniden oluşturma adımlarını <a href="mailto:ozerutku13@gmail.com">ozerutku13@gmail.com</a> adresine gönderin ve lütfen herkese açık olarak paylaşmadan önce düzeltmemiz için bize makul bir fırsat tanıyın. Sorumlu ifşaya minnettarız.</span>
+      </p>
+    </div>
+
+    <a class="back" href="index.html">← <span data-en>Back to overview</span><span data-tr>Genel bakışa dön</span></a>
+
+    <p class="foot">Burp Battle · © 2026 Utku Özer</p>
+  </main>
+  <script src="lang.js"></script>
+</body>
+</html>

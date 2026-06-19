@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Burp Battle — Privacy, Security &amp; Terms</title>
+  <meta name="description" content="Privacy Policy, Security overview, and Terms of Service for Burp Battle, the pass-and-play burp party game." />
+  <meta name="theme-color" content="#F6FBF7" />
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem("bb-legal-lang");
+        var l = (s === "en" || s === "tr") ? s
+          : ((navigator.language || "").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+        document.documentElement.setAttribute("data-lang", l);
+        document.documentElement.setAttribute("lang", l);
+      } catch (e) { document.documentElement.setAttribute("data-lang", "en"); }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">
+        <span class="badge">🎤</span>
+        <span class="name chunky">Burp Battle</span>
+      </a>
+      <button class="lang-toggle" data-lang-toggle type="button">TR</button>
+    </div>
+
+    <header class="hero">
+      <h1 class="chunky">
+        <span data-en>Privacy &amp; <span class="gold">Security.</span></span>
+        <span data-tr>Gizlilik ve <span class="gold">Güvenlik.</span></span>
+      </h1>
+      <p class="sub">
+        <span data-en>Everything about how Burp Battle treats your data — which is to say, it stays on your phone.</span>
+        <span data-tr>Burp Battle'ın verilerinizle nasıl ilgilendiği — kısacası: her şey telefonunuzda kalır.</span>
+      </p>
+      <span class="updated">
+        <span data-en>Last updated: June 19, 2026</span>
+        <span data-tr>Son güncelleme: 19 Haziran 2026</span>
+      </span>
+    </header>
+
+    <div class="card tldr">
+      <h2><span class="em">✅</span><span data-en>The short version</span><span data-tr>Kısa özet</span></h2>
+      <p>
+        <span data-en>Burp Battle is a pass-and-play party game. It runs entirely on your device, doesn't have accounts, doesn't talk to any server, and doesn't collect or sell your data. The microphone is used only to measure how loud your burp is — audio is never recorded or sent anywhere.</span>
+        <span data-tr>Burp Battle elden ele oynanan bir parti oyunudur. Tamamen cihazınızda çalışır; hesap yoktur, hiçbir sunucuyla konuşmaz ve verilerinizi toplamaz ya da satmaz. Mikrofon yalnızca geğirmenizin ne kadar yüksek olduğunu ölçmek için kullanılır — ses asla kaydedilmez veya bir yere gönderilmez.</span>
+      </p>
+    </div>
+
+    <nav class="nav-grid" aria-label="Legal documents">
+      <a class="nav-card" href="privacy.html">
+        <span class="ico">🔒</span>
+        <span class="body">
+          <span class="t" data-en>Privacy Policy</span><span class="t" data-tr>Gizlilik Politikası</span>
+          <span class="d" data-en>What data we touch (almost none) and why.</span>
+          <span class="d" data-tr>Hangi verilere dokunuyoruz (neredeyse hiç) ve neden.</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="nav-card" href="security.html">
+        <span class="ico">🛡️</span>
+        <span class="body">
+          <span class="t" data-en>Security</span><span class="t" data-tr>Güvenlik</span>
+          <span class="d" data-en>How the app stays safe by doing less.</span>
+          <span class="d" data-tr>Uygulamanın daha azını yaparak nasıl güvende kaldığı.</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="nav-card" href="terms.html">
+        <span class="ico">📜</span>
+        <span class="body">
+          <span class="t" data-en>Terms of Service</span><span class="t" data-tr>Kullanım Koşulları</span>
+          <span class="d" data-en>The friendly rules for playing.</span>
+          <span class="d" data-tr>Oynamak için dostça kurallar.</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
+
+    <p class="foot">
+      <span data-en>Questions? Email <a href="mailto:ozerutku13@gmail.com">ozerutku13@gmail.com</a>.</span>
+      <span data-tr>Sorularınız mı var? <a href="mailto:ozerutku13@gmail.com">ozerutku13@gmail.com</a> adresine yazın.</span>
+      <br />Burp Battle · © 2026 Utku Özer
+    </p>
+  </main>
+  <script src="lang.js"></script>
+</body>
+</html>
